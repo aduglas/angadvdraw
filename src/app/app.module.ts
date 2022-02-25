@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContrainteNavigationGuard, UserService , IUser, UserFalseService } from './draw';
 import { DrawModule } from './draw/draw.module';
 import { NavigationModule } from './navigation/navigation.module';
@@ -14,9 +13,8 @@ import { NavigationModule } from './navigation/navigation.module';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     DrawModule,
     NavigationModule
