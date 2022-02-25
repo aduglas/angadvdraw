@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContrainteNavigationGuard, UserService , IUser, UserFalseService } from './draw';
 import { DrawModule } from './draw/draw.module';
+import { NavigationModule } from './navigation/navigation.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DrawModule } from './draw/draw.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    DrawModule
+    DrawModule,
+    NavigationModule
   ],
   providers: [ {provide: IUser , useClass: UserService } ],
   bootstrap: [AppComponent]
